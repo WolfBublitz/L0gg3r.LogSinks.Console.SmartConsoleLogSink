@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// <copyright file="LogSinkBuilderExtensions.cs" company="L0gg3r">
+// <copyright file="LogToExtensions.cs" company="L0gg3r">
 // Copyright (c) L0gg3r Project
 // </copyright>
 // ----------------------------------------------------------------------------
@@ -11,7 +11,7 @@ namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 /// <summary>
 /// Provides extension methods for <see cref="LogSinkBuilder"/>.
 /// </summary>
-public static class ConsoleLogSinkBuilderExtensions
+public static class LogToExtensions
 {
     /// <summary>
     /// Creates a new <see cref="SmartConsoleLogSink"/> and adds it to the <see cref="LogSinkBuilder"/>.

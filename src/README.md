@@ -46,7 +46,7 @@ using L0gg3r;
 using L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 
 // this is the new format string
-string formatWithoutTime = "{Timestamp:yyyy-MM-dd}[{LogLevel}] [{Senders:list:{}| > }] {Payload}";
+string formatWithoutTime = "{Timestamp:yyyy-MM-dd} [{LogLevel}] [{Senders:list:{}| > }] {Payload}";
 
 await using (Logger logger = Logger.CreateLogger().LogTo.SmartConsole(console => console.Format = formatWithoutTime).Build())
 {

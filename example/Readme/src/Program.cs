@@ -6,7 +6,7 @@ await using (Logger logger = Logger.CreateLogger().LogTo.SmartConsole().Build())
     logger.Info("Hello, World!");
 }
 
-string format = "{Timestamp:yyyy-MM-dd}[{LogLevel}] [{Senders:list:{}| > }] {Payload}";
+string format = "{Timestamp:yyyy-MM-dd} [{LogLevel}] [{Senders:list:{}| > }] {Payload}";
 
 await using (Logger logger = Logger.CreateLogger().LogTo.SmartConsole(console => console.Format = format).Build())
 {
