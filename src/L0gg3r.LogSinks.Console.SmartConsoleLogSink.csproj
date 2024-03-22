@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ProjectsDir>$(ProjectsDir)../../</ProjectsDir>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="Exists($(CI))">true</RestoreLockedMode>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="L0gg3r.CodeAnalyzer" Version="[1.*-*, 2)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SmartFormat.NET" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
+    <PackageReference Include="L0gg3r" Version="[1.*-*, 2)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' == 'true'">
+    <ProjectReference Include="$(ProjectsDir)/L0gg3r/src/L0gg3r.csproj" />
+  </ItemGroup>
+
+  <Target Name="Print Build Mode" BeforeTargets="BeforeBuild">
+      <Message Importance="High" Text="Building $(ProjectName) in $(Configuration) mode for $(TargetFramework) with PROJECT references" Condition="'$(UseProjectReferences)' == 'true'" />
+      <Message Importance="High" Text="Building $(ProjectName) in $(Configuration) mode for $(TargetFramework) with PACKAGE references" Condition="'$(UseProjectReferences)' != 'true'" />
+  </Target>
+
+</Project>
