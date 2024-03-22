@@ -1,1 +1,16 @@
 #nullable enable
+L0gg3r.LogSinks.Console.SimpleConsoleWriter
+L0gg3r.LogSinks.Console.SimpleConsoleWriter.LogSink.get -> L0gg3r.ILogSink?
+L0gg3r.LogSinks.Console.SimpleConsoleWriter.LogSink.set -> void
+L0gg3r.LogSinks.Console.SimpleConsoleWriter.SimpleConsoleWriter() -> void
+L0gg3r.LogSinks.Console.SimpleConsoleWriter.WriteAsync(in L0gg3r.LogMessage logMessage) -> System.Threading.Tasks.ValueTask<L0gg3r.Continuation>
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.Format.get -> string!
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.Format.set -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.SmartConsoleLogSink() -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder.SmartConsoleLogSinkBuilder() -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder.WithFormat(string! format) -> L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder!
+static L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions.SmartConsole(this L0gg3r.LogTo! this) -> L0gg3r.LoggerBuilder!
+static L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions.SmartConsole(this L0gg3r.LogTo! this, System.Action<L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink!>! logSinkBuilder) -> L0gg3r.LoggerBuilder!
