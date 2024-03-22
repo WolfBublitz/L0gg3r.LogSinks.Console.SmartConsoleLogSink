@@ -14,12 +14,12 @@ The `SmartConsoleLogSink` as a `Format` property that can be set to a custom for
 
 Available placeholders are:
 
-| Placeholder | Type | Description |
-| --- | --- | --- |
-| `Timestamp` | `DateTime` | The time the log message was created. |
-| `LogLevel` | `LogLevel` | The log level of the message. |
-| `Senders` | `string[]` | The list of senders that created the log message. |
-| `Payload` | `object` | The payload of the log message. |
+| Placeholder | Type       | Description                                       |
+|-------------|------------|---------------------------------------------------|
+| `Timestamp` | `DateTime` | The time the log message was created.             |
+| `LogLevel`  | `LogLevel` | The log level of the message.                     |
+| `Senders`   | `string[]` | The list of senders that created the log message. |
+| `Payload`   | `object`   | The payload of the log message.                   |
 
 ```c#
 
