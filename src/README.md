@@ -21,7 +21,6 @@ Available placeholders are:
 | `Senders` | `string[]` | The list of senders that created the log message. |
 | `Payload` | `object` | The payload of the log message. |
 
-
 ```c#
 
 ## Examples
