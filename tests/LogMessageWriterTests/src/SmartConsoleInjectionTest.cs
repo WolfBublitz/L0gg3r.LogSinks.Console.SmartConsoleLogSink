@@ -12,7 +12,7 @@ internal class LogMessageWriter : ILogMessageWriter
         SmartConsole = smartConsole;
     }
 
-    public static SmartConsole SmartConsole { get; set; }
+    public static SmartConsole? SmartConsole { get; set; }
 
     public ValueTask<Continuation> WriteAsync(in LogMessage logMessage)
     {
