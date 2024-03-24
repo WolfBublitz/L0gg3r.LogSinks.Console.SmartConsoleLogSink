@@ -4,17 +4,33 @@
 // </copyright>
 // ----------------------------------------------------------------------------
 
+using System;
 using System.Threading.Tasks;
-
-using SmartFormat;
 
 namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 
 /// <summary>
 /// A simple log sink that writes <see cref="LogMessage"/>s to the console.
 /// </summary>
-public sealed class SmartConsoleLogSink : LogSinkBase
+public class SmartConsoleLogSink : LogSinkBase
 {
+    // ┌────────────────────────────────────────────────────────────────────────────────┐
+    // │ Private Fields                                                                 │
+    // └────────────────────────────────────────────────────────────────────────────────┘
+    private readonly SmartConsole smartConsole = new();
+
+    // ┌────────────────────────────────────────────────────────────────────────────────┐
+    // │ Public Constructors                                                            │
+    // └────────────────────────────────────────────────────────────────────────────────┘
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SmartConsoleLogSink"/> class.
+    /// </summary>
+    public SmartConsoleLogSink()
+    {
+        ServiceProvider.RegisterServiceInstance(smartConsole);
+    }
+
     /// <summary>
     /// Gets or sets the format of the <see cref="LogMessage"/>.
     /// </summary>
@@ -25,11 +41,30 @@ public sealed class SmartConsoleLogSink : LogSinkBase
     // └────────────────────────────────────────────────────────────────────────────────┘
 
     /// <inheritdoc/>
-    protected override ValueTask WriteAsync(in LogMessage logMessage)
+    /// <seealso cref="WriteAsync(in LogMessage, SmartConsole)"/>
+    protected sealed override ValueTask WriteAsync(in LogMessage logMessage)
     {
-        string output = Smart.Format(Format, logMessage);
+        return WriteAsync(logMessage, smartConsole);
+    }
 
-        System.Console.WriteLine(output);
+    /// <summary>
+    /// Writes the <see cref="LogMessage"/> to the console using the <paramref name="smartConsole"/>.
+    /// </summary>
+    /// <param name="logMessage">The <see cref="LogMessage"/> to write.</param>
+    /// <param name="smartConsole">The <see cref="SmartConsole"/> that shall be written to.</param>
+    /// <returns>A <see cref="ValueTask"/> that completes when the writing has finished.</returns>
+    protected virtual ValueTask WriteAsync(in LogMessage logMessage, SmartConsole smartConsole)
+    {
+        ArgumentNullException.ThrowIfNull(smartConsole, nameof(smartConsole));
+
+        try
+        {
+            smartConsole.WriteLine(Format, logMessage);
+        }
+        catch (Exception ex)
+        {
+            return ValueTask.FromException(ex);
+        }
 
         return ValueTask.CompletedTask;
     }

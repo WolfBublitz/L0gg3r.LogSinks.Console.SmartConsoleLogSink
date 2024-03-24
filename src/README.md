@@ -2,10 +2,16 @@
 
 This is a simple L0gg3r log sink that logs to the console and uses [SmartFormat](https://github.com/axuno/SmartFormat) to format log messages.
 
+## Features
+
+- Simple to use
+- Customizable format string
+- No Color support
+
 ## Installation
 
-```xml
-<PackageReference Include="L0gg3r.LogSinks.Console.SmartConsoleLogSink" Version="1.*"  />
+```console
+dotnet add package L0gg3r.LogSinks.Console.SmartConsoleLogSink
 ```
 
 ## Configuration
