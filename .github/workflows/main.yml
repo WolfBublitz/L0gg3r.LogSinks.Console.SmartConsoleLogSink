@@ -30,16 +30,7 @@ jobs:
   PublishToGithub:
     name: Publish to Github
     needs: [
-      AppDomainExtensionsTests,
-      AssemblyExtensionsTests,
-      LoggerBuilderTests,
-      LoggerTests,
-      LogLevelTests,
-      LogMessagePipelineTests,
-      LogMessageTests,
-      LogMessageWriterInfoTests,
-      LogSinkBaseTests,
-      ServiceProviderTests,
+      SmartConsoleLogSinkTests
     ]
     uses: ./.github/workflows/publish-to-github.yml
     with:
