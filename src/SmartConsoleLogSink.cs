@@ -55,7 +55,7 @@ public class SmartConsoleLogSink : LogSinkBase
     /// <param name="logMessage">The <see cref="LogMessage"/> to write.</param>
     /// <param name="smartConsole">The <see cref="SmartConsole"/> that shall be written to.</param>
     /// <returns>A <see cref="ValueTask"/> that completes when the writing has finished.</returns>
-    protected virtual ValueTask WriteAsync(LogMessage logMessage, SmartConsole smartConsole)
+    protected virtual ValueTask WriteAsync(in LogMessage logMessage, SmartConsole smartConsole)
     {
         ArgumentNullException.ThrowIfNull(smartConsole, nameof(smartConsole));
 
