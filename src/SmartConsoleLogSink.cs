@@ -7,6 +7,8 @@
 using System;
 using System.Threading.Tasks;
 
+using SmartFormat.Core.Parsing;
+
 namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 
 /// <summary>
@@ -53,7 +55,7 @@ public class SmartConsoleLogSink : LogSinkBase
     /// <param name="logMessage">The <see cref="LogMessage"/> to write.</param>
     /// <param name="smartConsole">The <see cref="SmartConsole"/> that shall be written to.</param>
     /// <returns>A <see cref="ValueTask"/> that completes when the writing has finished.</returns>
-    protected virtual ValueTask WriteAsync(in LogMessage logMessage, SmartConsole smartConsole)
+    protected virtual ValueTask WriteAsync(LogMessage logMessage, SmartConsole smartConsole)
     {
         ArgumentNullException.ThrowIfNull(smartConsole, nameof(smartConsole));
 
@@ -61,9 +63,9 @@ public class SmartConsoleLogSink : LogSinkBase
         {
             smartConsole.WriteLine(Format, logMessage);
         }
-        catch (Exception ex)
+        catch (ParsingErrors parsingErrors)
         {
-            return ValueTask.FromException(ex);
+            System.Console.WriteLine(parsingErrors.Message);
         }
 
         return ValueTask.CompletedTask;

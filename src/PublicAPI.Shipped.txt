@@ -14,3 +14,11 @@ L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder.SmartCons
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder.WithFormat(string! format) -> L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder!
 static L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions.SmartConsole(this L0gg3r.LogTo! this) -> L0gg3r.LoggerBuilder!
 static L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions.SmartConsole(this L0gg3r.LogTo! this, System.Action<L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink!>! logSinkBuilder) -> L0gg3r.LoggerBuilder!
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.SmartConsole() -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.WriteLine(string! format, params object![]! parameters) -> void
+override sealed L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage) -> System.Threading.Tasks.ValueTask
+static L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions.SmartConsole(this L0gg3r.LogTo! this) -> L0gg3r.LoggerBuilder!
+static L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions.SmartConsole(this L0gg3r.LogTo! this, System.Action<L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink!>! logSinkBuilder) -> L0gg3r.LoggerBuilder!
+virtual L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage, L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole! smartConsole) -> System.Threading.Tasks.ValueTask
