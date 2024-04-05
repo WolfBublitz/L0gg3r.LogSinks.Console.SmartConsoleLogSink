@@ -7,6 +7,8 @@
 using System;
 using System.Threading.Tasks;
 
+using L0gg3r.LogSinks.Console.Base;
+
 using SmartFormat.Core.Parsing;
 
 namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
@@ -14,7 +16,7 @@ namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 /// <summary>
 /// A simple log sink that writes <see cref="LogMessage"/>s to the console.
 /// </summary>
-public class SmartConsoleLogSink : LogSinkBase
+public class SmartConsoleLogSink : ConsoleLogSinkBase<SmartConsole>
 {
     // ┌────────────────────────────────────────────────────────────────────────────────┐
     // │ Private Fields                                                                 │
@@ -29,8 +31,8 @@ public class SmartConsoleLogSink : LogSinkBase
     /// Initializes a new instance of the <see cref="SmartConsoleLogSink"/> class.
     /// </summary>
     public SmartConsoleLogSink()
+        : base(new SmartConsole())
     {
-        ServiceProvider.RegisterServiceInstance(smartConsole);
     }
 
     /// <summary>
@@ -44,24 +46,13 @@ public class SmartConsoleLogSink : LogSinkBase
 
     /// <inheritdoc/>
     /// <seealso cref="WriteAsync(in LogMessage, SmartConsole)"/>
-    protected sealed override ValueTask WriteAsync(in LogMessage logMessage)
+    protected sealed override ValueTask WriteAsync(in LogMessage logMessage, SmartConsole console)
     {
-        return WriteAsync(logMessage, smartConsole);
-    }
-
-    /// <summary>
-    /// Writes the <see cref="LogMessage"/> to the console using the <paramref name="smartConsole"/>.
-    /// </summary>
-    /// <param name="logMessage">The <see cref="LogMessage"/> to write.</param>
-    /// <param name="smartConsole">The <see cref="SmartConsole"/> that shall be written to.</param>
-    /// <returns>A <see cref="ValueTask"/> that completes when the writing has finished.</returns>
-    protected virtual ValueTask WriteAsync(in LogMessage logMessage, SmartConsole smartConsole)
-    {
-        ArgumentNullException.ThrowIfNull(smartConsole, nameof(smartConsole));
+        ArgumentNullException.ThrowIfNull(this.smartConsole, nameof(SmartConsoleLogSink.smartConsole));
 
         try
         {
-            smartConsole.WriteLine(Format, logMessage);
+            this.smartConsole.WriteLineSmart(Format, logMessage);
         }
         catch (ParsingErrors parsingErrors)
         {

@@ -22,3 +22,4 @@ override sealed L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.
 static L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions.SmartConsole(this L0gg3r.LogTo! this) -> L0gg3r.LoggerBuilder!
 static L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions.SmartConsole(this L0gg3r.LogTo! this, System.Action<L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink!>! logSinkBuilder) -> L0gg3r.LoggerBuilder!
 virtual L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage, L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole! smartConsole) -> System.Threading.Tasks.ValueTask
+override sealed L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage, L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole! console) -> System.Threading.Tasks.ValueTask

@@ -125,6 +125,12 @@
       },
       "l0gg3r": {
         "type": "Project"
+      },
+      "l0gg3r.logsinks.console.base": {
+        "type": "Project",
+        "dependencies": {
+          "L0gg3r": "[1.0.0, )"
+        }
       }
     }
   }
