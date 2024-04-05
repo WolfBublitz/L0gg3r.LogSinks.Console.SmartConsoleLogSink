@@ -34,10 +34,12 @@
 
   <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
     <PackageReference Include="L0gg3r" Version="[1.*-*, 2)" />
+    <PackageReference Include="L0gg3r.LogSinks.Console.Base" Version="[1.*-*, 2)" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(UseProjectReferences)' == 'true'">
     <ProjectReference Include="$(ProjectsDir)/L0gg3r/src/L0gg3r.csproj" />
+    <ProjectReference Include="$(ProjectsDir)/L0gg3r.LogSinks.Console.Base/src/L0gg3r.LogSinks.Console.Base.csproj" />
   </ItemGroup>
 
   <Target Name="Print Build Mode" BeforeTargets="BeforeBuild">
