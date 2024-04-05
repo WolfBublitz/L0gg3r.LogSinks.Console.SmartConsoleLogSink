@@ -4,7 +4,18 @@ L0gg3r.LogSinks.Console.SimpleConsoleWriter.LogSink.get -> L0gg3r.ILogSink?
 L0gg3r.LogSinks.Console.SimpleConsoleWriter.LogSink.set -> void
 L0gg3r.LogSinks.Console.SimpleConsoleWriter.SimpleConsoleWriter() -> void
 L0gg3r.LogSinks.Console.SimpleConsoleWriter.WriteAsync(in L0gg3r.LogMessage logMessage) -> System.Threading.Tasks.ValueTask<L0gg3r.Continuation>
-L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.Ask<TValue>(string! question, System.Func<string!, TValue>! converter, TValue defaultAnswer) -> TValue
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.Confirm(string! question, bool defaultAnswer) -> bool
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.IsInteractive.get -> bool
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.IsInteractive.set -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.SmartConsole() -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.Write(string! message) -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.WriteLine() -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.WriteLine(string! message) -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.WriteLineSmart(string! message, params object![]! parameters) -> void
+L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.WriteSmart(string! message, params object![]! parameters) -> void
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.Format.get -> string!
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.Format.set -> void
@@ -12,14 +23,6 @@ L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.SmartConsoleLogS
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder.SmartConsoleLogSinkBuilder() -> void
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder.WithFormat(string! format) -> L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSinkBuilder!
-static L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions.SmartConsole(this L0gg3r.LogTo! this) -> L0gg3r.LoggerBuilder!
-static L0gg3r.LogSinks.Console.SmartConsoleLogSink.ConsoleLogSinkBuilderExtensions.SmartConsole(this L0gg3r.LogTo! this, System.Action<L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink!>! logSinkBuilder) -> L0gg3r.LoggerBuilder!
-L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions
-L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole
-L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.SmartConsole() -> void
-L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.WriteLine(string! format, params object![]! parameters) -> void
-override sealed L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage) -> System.Threading.Tasks.ValueTask
+override sealed L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage, L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole! console) -> System.Threading.Tasks.ValueTask
 static L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions.SmartConsole(this L0gg3r.LogTo! this) -> L0gg3r.LoggerBuilder!
 static L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions.SmartConsole(this L0gg3r.LogTo! this, System.Action<L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink!>! logSinkBuilder) -> L0gg3r.LoggerBuilder!
-virtual L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage, L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole! smartConsole) -> System.Threading.Tasks.ValueTask
-override sealed L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.LogMessage logMessage, L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole! console) -> System.Threading.Tasks.ValueTask
