@@ -19,11 +19,6 @@ namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 public class SmartConsoleLogSink : ConsoleLogSinkBase<SmartConsole>
 {
     // ┌────────────────────────────────────────────────────────────────────────────────┐
-    // │ Private Fields                                                                 │
-    // └────────────────────────────────────────────────────────────────────────────────┘
-    private readonly SmartConsole smartConsole = new();
-
-    // ┌────────────────────────────────────────────────────────────────────────────────┐
     // │ Public Constructors                                                            │
     // └────────────────────────────────────────────────────────────────────────────────┘
 
@@ -33,6 +28,7 @@ public class SmartConsoleLogSink : ConsoleLogSinkBase<SmartConsole>
     public SmartConsoleLogSink()
         : base(new SmartConsole())
     {
+        ServiceProvider.RegisterServiceInstance(Console);
     }
 
     /// <summary>
@@ -48,11 +44,11 @@ public class SmartConsoleLogSink : ConsoleLogSinkBase<SmartConsole>
     /// <seealso cref="WriteAsync(in LogMessage, SmartConsole)"/>
     protected sealed override ValueTask WriteAsync(in LogMessage logMessage, SmartConsole console)
     {
-        ArgumentNullException.ThrowIfNull(this.smartConsole, nameof(SmartConsoleLogSink.smartConsole));
+        ArgumentNullException.ThrowIfNull(console, nameof(console));
 
         try
         {
-            this.smartConsole.WriteLineSmart(Format, logMessage);
+            console.WriteLineSmart(Format, logMessage);
         }
         catch (ParsingErrors parsingErrors)
         {
