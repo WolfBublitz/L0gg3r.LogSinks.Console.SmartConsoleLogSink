@@ -20,7 +20,7 @@
       "L0gg3r.LogSinks.Console.Base": {
         "type": "Direct",
         "requested": "[1.*-*, 2.0.0)",
-        "resolved": "1.0.0",
+        "resolved": "1.0.0-preview.2",
         "contentHash": "OGRCQnMPJiQiCExqAVWbTY/qr+ZLcE5rdZ4vS/1fKm1hwOy2DFqWaeh+njO0Rt3OpAMfhtstGYbURh00IYNhRw==",
         "dependencies": {
           "L0gg3r": "[1.0.0-preview.4, 2.0.0)"
