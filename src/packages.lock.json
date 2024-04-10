@@ -5,8 +5,8 @@
       "L0gg3r": {
         "type": "Direct",
         "requested": "[1.*-*, 2.0.0)",
-        "resolved": "1.0.0-preview.4",
-        "contentHash": "LjZaokac8UGpzVT1SVz78g3CiGLLmy5fpoW8CO1VR428U19nNl1zn9oCRRSJl3mB8HeztPKdJt1CAUoOZHGGfA=="
+        "resolved": "1.0.0-preview.6",
+        "contentHash": "hgZ6F9cL26p95bnS7roJhY1JyhinsWl0QQl9yzMNMjd82CY6eeIKZT+w8CUTy03Q+uPtJltoXbxDRld1EE9/BQ=="
       },
       "L0gg3r.CodeAnalyzer": {
         "type": "Direct",
@@ -20,7 +20,7 @@
       "L0gg3r.LogSinks.Console.Base": {
         "type": "Direct",
         "requested": "[1.*-*, 2.0.0)",
-        "resolved": "1.0.0-preview.2",
+        "resolved": "1.0.0",
         "contentHash": "OGRCQnMPJiQiCExqAVWbTY/qr+ZLcE5rdZ4vS/1fKm1hwOy2DFqWaeh+njO0Rt3OpAMfhtstGYbURh00IYNhRw==",
         "dependencies": {
           "L0gg3r": "[1.0.0-preview.4, 2.0.0)"
