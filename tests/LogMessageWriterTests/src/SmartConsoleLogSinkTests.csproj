@@ -20,6 +20,7 @@
     <CollectCoverage>true</CollectCoverage>
     <CoverletOutputFormat>lcov</CoverletOutputFormat>
     <CoverletOutput>lcov.info</CoverletOutput>
+    <Include>[L0gg3r.LogSinks.Console.SmartConsoleLogSink]L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink*</Include>
   </PropertyGroup>
 
   <ItemGroup>

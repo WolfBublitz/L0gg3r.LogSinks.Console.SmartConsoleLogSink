@@ -18,14 +18,14 @@ jobs:
       dotnet-version: 8.0.x
       configuration: Release
 
-  LogMessageWriterTests:
+  SmartConsoleLogSinkTests:
     name: AppDomainExtensions Tests
     needs: [BuildNugetPackage]
     uses: ./.github/workflows/execute-test.yml
     with:
       dotnet-version: 8.0.x
       configuration: Release
-      project-path: ./tests/LogMessageWriterTests/src
+      project-path: ./tests/SmartConsoleLogSinkTests/src
 
   OutputTests:
     name: AppDomainExtensions Tests
@@ -39,7 +39,7 @@ jobs:
   PublishToGithub:
     name: Publish to Github
     needs: [
-      LogMessageWriterTests,
+      SmartConsoleLogSinkTests,
       OutputTests
     ]
     uses: ./.github/workflows/publish-to-github.yml

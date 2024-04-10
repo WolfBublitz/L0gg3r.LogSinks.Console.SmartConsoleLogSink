@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L0gg3r.LogSinks.Console.Sma
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C6019D7E-4BEC-474C-8F84-7D2EEA51D34E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LogMessageWriterTests", "LogMessageWriterTests", "{6410E19C-6ABB-487D-ABE2-B3388B6801E4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmartConsoleLogSinkTests", "SmartConsoleLogSinkTests", "{6410E19C-6ABB-487D-ABE2-B3388B6801E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogMessageWriterTests", "tests\LogMessageWriterTests\src\LogMessageWriterTests.csproj", "{DA299512-99C9-4531-AA4E-4C7530427637}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartConsoleLogSinkTests", "tests\LogMessageWriterTests\src\SmartConsoleLogSinkTests.csproj", "{DA299512-99C9-4531-AA4E-4C7530427637}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OutputTests", "OutputTests", "{9357D3AD-BEB3-43CA-A742-7604DA38BA3F}"
 EndProject
