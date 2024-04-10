@@ -1,9 +1,4 @@
 #nullable enable
-L0gg3r.LogSinks.Console.SimpleConsoleWriter
-L0gg3r.LogSinks.Console.SimpleConsoleWriter.LogSink.get -> L0gg3r.ILogSink?
-L0gg3r.LogSinks.Console.SimpleConsoleWriter.LogSink.set -> void
-L0gg3r.LogSinks.Console.SimpleConsoleWriter.SimpleConsoleWriter() -> void
-L0gg3r.LogSinks.Console.SimpleConsoleWriter.WriteAsync(in L0gg3r.LogMessage logMessage) -> System.Threading.Tasks.ValueTask<L0gg3r.Continuation>
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.Ask<TValue>(string! question, System.Func<string!, TValue>! converter, TValue defaultAnswer) -> TValue
