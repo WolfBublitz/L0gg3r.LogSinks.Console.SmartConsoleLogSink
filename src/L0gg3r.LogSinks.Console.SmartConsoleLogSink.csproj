@@ -30,8 +30,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="MinVer" Version="[4.*, 5)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="SmartFormat.NET" Version="3.3.2" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
+  </PropertyGroup>
 
   <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
     <PackageReference Include="L0gg3r" Version="[1.*-*, 2)" />

@@ -20,10 +20,11 @@
       "L0gg3r.LogSinks.Console.Base": {
         "type": "Direct",
         "requested": "[1.*-*, 2.0.0)",
-        "resolved": "1.0.0-preview.4",
-        "contentHash": "6x9BJTv55pabIIdR/71rLEm0LISL1sIlSjvTaijp018N9lkmIsila1RnApmJobnp+YhYlNIe+yyspcJlRw0HDg==",
+        "resolved": "1.0.0-preview.5",
+        "contentHash": "nAmfahI8zgW0iUXSzTPa8IT0G5qLVc4cIX0Cp3ZX88YKN/FPlgb0bpZt7M8bQhbpSwzy0Tda9gN9RinRz3Oycg==",
         "dependencies": {
-          "L0gg3r": "[1.0.0-preview.6, 2.0.0)"
+          "L0gg3r.Base": "[1.0.0-preview.8, 2.0.0)",
+          "L0gg3r.LogSinks.Base": "[1.0.0-preview.4, 2.0.0)"
         }
       },
       "Microsoft.CodeAnalysis.PublicApiAnalyzers": {
@@ -31,6 +32,12 @@
         "requested": "[3.3.0, )",
         "resolved": "3.3.0",
         "contentHash": "upaG6u/PxjkOj39Kk0DLmmA75acYChmv6/HnOUxvSgGWul53uPcVaPxBWCzkHDfIljyiq5qeIG+CatT8x8FAEA=="
+      },
+      "MinVer": {
+        "type": "Direct",
+        "requested": "[4.*, 5.0.0)",
+        "resolved": "4.3.0",
+        "contentHash": "YNVAW3loCFW4kTwensApaZUl+7xREK75QQNOFSbsbXx2sCSm9/IHBjUHsJGn3u0UA5r/sAqrdYBNUlOFfLhUrA=="
       },
       "SmartFormat.NET": {
         "type": "Direct",
@@ -43,6 +50,19 @@
           "SmartFormat.Extensions.System.Text.Json": "3.3.2",
           "SmartFormat.Extensions.Time": "3.3.2",
           "SmartFormat.Extensions.Xml": "3.3.2"
+        }
+      },
+      "L0gg3r.Base": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview.8",
+        "contentHash": "zMTnJpVzDuaHaCnBZ9ZzeHLOP2gDJHjtY8WG9o5uirB0nQSqZWyK5wf0Yrqmoy4Qkoj2aLSaounh7hNBvujyOw=="
+      },
+      "L0gg3r.LogSinks.Base": {
+        "type": "Transitive",
+        "resolved": "1.0.0-preview.4",
+        "contentHash": "w9oxokL+2Vt4hxgb+kJV+94VU+Zfs81a1BcF3mQRKvu1QHLDUwGrk+WoyDFMr/wcLiRDFT6vWQV+mBrQi50mrQ==",
+        "dependencies": {
+          "L0gg3r.Base": "[1.0.0-preview.8, 2.0.0)"
         }
       },
       "Newtonsoft.Json": {
