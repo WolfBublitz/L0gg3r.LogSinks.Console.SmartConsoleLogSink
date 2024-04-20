@@ -3,8 +3,6 @@ L0gg3r.LogSinks.Console.SmartConsoleLogSink.LogToExtensions
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.Ask<TValue>(string! question, System.Func<string!, TValue>! converter, TValue defaultAnswer) -> TValue
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.Confirm(string! question, bool defaultAnswer) -> bool
-L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.IsInteractive.get -> bool
-L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.IsInteractive.set -> void
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.SmartConsole() -> void
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.Write(string! message) -> void
 L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole.WriteLine() -> void

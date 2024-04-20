@@ -4,8 +4,8 @@ using L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 
 namespace LogMessageWriterTests.SmartConsoleInjectionTest;
 
-[LogMessageWriter<SmartConsoleLogSink, int>]
-internal class LogMessageWriter : ILogMessageWriter
+[LogMessageWriter<SmartConsoleLogSink>]
+internal class LogMessageWriter
 {
     public LogMessageWriter(SmartConsole smartConsole)
     {
@@ -13,11 +13,6 @@ internal class LogMessageWriter : ILogMessageWriter
     }
 
     public static SmartConsole? SmartConsole { get; set; }
-
-    public ValueTask<Continuation> WriteAsync(in LogMessage logMessage)
-    {
-        return ValueTask.FromResult(Continuation.Stop);
-    }
 }
 
 [TestClass]
@@ -28,7 +23,6 @@ public class TheSmartConsoleLogSink
     {
         // Arrange
         SmartConsoleLogSink logSink = new();
-        logSink.ServiceProvider.RegisterLogMessageWriter<LogMessageWriter>();
 
         // Act
         await logSink.SubmitAsync(new LogMessage() { Payload = 42 }).ConfigureAwait(false);

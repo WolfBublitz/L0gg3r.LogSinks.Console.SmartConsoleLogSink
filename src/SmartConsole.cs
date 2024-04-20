@@ -18,20 +18,13 @@ namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 public sealed class SmartConsole : IConsole
 {
     // ┌────────────────────────────────────────────────────────────────────────────────┐
-    // │ Public Properties                                                              │
-    // └────────────────────────────────────────────────────────────────────────────────┘
-
-    /// <inheritdoc/>
-    public bool IsInteractive { get; set; }
-
-    // ┌────────────────────────────────────────────────────────────────────────────────┐
     // │ Public Methods                                                                 │
     // └────────────────────────────────────────────────────────────────────────────────┘
 
     /// <inheritdoc/>
     public TValue Ask<TValue>(string question, Func<string, TValue> converter, TValue defaultAnswer)
     {
-        if (IsInteractive)
+        if (((IConsole)this).IsInteractive)
         {
             ArgumentNullException.ThrowIfNull(converter, nameof(converter));
 
@@ -66,7 +59,7 @@ public sealed class SmartConsole : IConsole
     /// <inheritdoc/>
     public bool Confirm(string question, bool defaultAnswer)
     {
-        if (IsInteractive)
+        if (((IConsole)this).IsInteractive)
         {
             while (true)
             {

@@ -1622,89 +1622,86 @@ FNF:2
 FNH:0
 end_of_record
 SF:/Users/wolf/Coden/L0gg3r/L0gg3r.LogSinks.Console.SmartConsoleLogSink/src/SmartConsole.cs
-FN:24,System.Boolean L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::get_IsInteractive()
-FNDA:0,System.Boolean L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::get_IsInteractive()
-DA:25,0
-FN:32,TValue L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Ask(System.String,System.Func`2<System.String,TValue>,TValue)
+FN:25,TValue L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Ask(System.String,System.Func`2<System.String,TValue>,TValue)
 FNDA:0,TValue L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Ask(System.String,System.Func`2<System.String,TValue>,TValue)
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
 DA:33,0
-DA:34,0
 DA:35,0
-DA:36,0
+DA:37,0
 DA:38,0
 DA:39,0
-DA:40,0
-DA:42,0
 DA:44,0
 DA:45,0
-DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
 DA:51,0
-DA:52,0
 DA:54,0
 DA:55,0
-DA:56,0
-DA:58,0
+DA:57,0
+BRDA:27,9,0,0
+BRDA:37,58,0,0
+BRDA:37,58,1,0
+BRDA:27,9,1,0
+FN:60,System.Boolean L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Confirm(System.String,System.Boolean)
+FNDA:0,System.Boolean L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Confirm(System.String,System.Boolean)
 DA:61,0
 DA:62,0
+DA:63,0
 DA:64,0
-BRDA:34,9,0,0
-BRDA:44,58,0,0
-BRDA:44,58,1,0
-BRDA:34,9,1,0
-FN:67,System.Boolean L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Confirm(System.String,System.Boolean)
-FNDA:0,System.Boolean L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Confirm(System.String,System.Boolean)
+DA:65,0
+DA:66,0
 DA:68,0
-DA:69,0
 DA:70,0
 DA:71,0
 DA:72,0
-DA:73,0
+DA:74,0
 DA:75,0
-DA:77,0
+DA:76,0
 DA:78,0
 DA:79,0
-DA:81,0
+DA:80,0
 DA:82,0
-DA:83,0
 DA:85,0
 DA:86,0
-DA:87,0
-DA:89,0
-DA:92,0
-DA:93,0
-DA:95,0
-BRDA:69,9,0,0
-BRDA:77,46,0,0
-BRDA:77,46,1,0
-BRDA:81,63,0,0
-BRDA:81,63,1,0
-BRDA:81,82,0,0
-BRDA:81,82,1,0
-BRDA:85,102,0,0
-BRDA:85,102,1,0
-BRDA:85,123,0,0
-BRDA:85,123,1,0
-BRDA:69,9,1,0
-FN:97,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Write(System.String)
+DA:88,0
+BRDA:62,9,0,0
+BRDA:70,46,0,0
+BRDA:70,46,1,0
+BRDA:74,63,0,0
+BRDA:74,63,1,0
+BRDA:74,82,0,0
+BRDA:74,82,1,0
+BRDA:78,102,0,0
+BRDA:78,102,1,0
+BRDA:78,123,0,0
+BRDA:78,123,1,0
+BRDA:62,9,1,0
+FN:90,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Write(System.String)
 FNDA:0,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::Write(System.String)
-DA:98,0
-FN:100,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLine(System.String)
+DA:91,0
+FN:93,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLine(System.String)
 FNDA:0,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLine(System.String)
-DA:101,0
-FN:103,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLine()
+DA:94,0
+FN:96,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLine()
 FNDA:0,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLine()
-DA:104,0
-FN:116,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteSmart(System.String,System.Object[])
+DA:97,0
+FN:109,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteSmart(System.String,System.Object[])
 FNDA:0,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteSmart(System.String,System.Object[])
-DA:117,0
-FN:130,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLineSmart(System.String,System.Object[])
+DA:110,0
+FN:123,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLineSmart(System.String,System.Object[])
 FNDA:4,System.Void L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole::WriteLineSmart(System.String,System.Object[])
-DA:131,4
-LF:46
+DA:124,4
+LF:45
 LH:1
 BRF:16
 BRH:0
-FNF:8
+FNF:7
 FNH:1
 end_of_record
 SF:/Users/wolf/Coden/L0gg3r/L0gg3r.LogSinks.Console.SmartConsoleLogSink/src/SmartConsoleLogSink.cs
