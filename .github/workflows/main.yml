@@ -19,7 +19,7 @@ jobs:
       configuration: Release
 
   SmartConsoleLogSinkTests:
-    name: AppDomainExtensions Tests
+    name: SmartConsoleLogSink Tests
     needs: [BuildNugetPackage]
     uses: ./.github/workflows/execute-test.yml
     with:
@@ -28,7 +28,7 @@ jobs:
       project-path: ./tests/SmartConsoleLogSinkTests/src
 
   OutputTests:
-    name: AppDomainExtensions Tests
+    name: Output Tests
     needs: [BuildNugetPackage]
     uses: ./.github/workflows/execute-test.yml
     with:
