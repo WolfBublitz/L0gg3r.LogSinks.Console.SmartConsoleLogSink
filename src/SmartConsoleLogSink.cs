@@ -7,6 +7,7 @@
 using System;
 using System.Threading.Tasks;
 
+using L0gg3r.Base;
 using L0gg3r.LogSinks.Console.Base;
 
 using SmartFormat.Core.Parsing;
@@ -28,7 +29,6 @@ public class SmartConsoleLogSink : ConsoleLogSinkBase<SmartConsole>
     public SmartConsoleLogSink()
         : base(new SmartConsole())
     {
-        ServiceProvider.RegisterServiceInstance(Console);
     }
 
     /// <summary>

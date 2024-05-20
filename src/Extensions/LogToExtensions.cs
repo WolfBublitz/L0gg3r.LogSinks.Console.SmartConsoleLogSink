@@ -6,10 +6,12 @@
 
 using System;
 
+using L0gg3r.Builder;
+
 namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 
 /// <summary>
-/// Provides extension methods for <see cref="LogSinkBuilder"/>.
+/// Provides extension methods for <see cref="LogTo"/>.
 /// </summary>
 public static class LogToExtensions
 {
@@ -20,19 +22,26 @@ public static class LogToExtensions
     /// <returns>The <see cref="LoggerBuilder"/>.</returns>
     public static LoggerBuilder SmartConsole(this LogTo @this)
     {
-        SmartConsoleLogSink consoleLogSinkBuilder = new();
+        return @this.SmartConsole(new SmartConsoleLogSink());
+    }
 
-        return @this.LogSink(consoleLogSinkBuilder);
+    public static LoggerBuilder SmartConsole(this LogTo @this, SmartConsoleLogSink smartConsoleLogSink)
+    {
+        ArgumentNullException.ThrowIfNull(@this, nameof(@this));
+        ArgumentNullException.ThrowIfNull(smartConsoleLogSink, nameof(smartConsoleLogSink));
+
+        return @this.LogSink(smartConsoleLogSink);
     }
 
     public static LoggerBuilder SmartConsole(this LogTo @this, Action<SmartConsoleLogSink> logSinkBuilder)
     {
+        ArgumentNullException.ThrowIfNull(@this, nameof(@this));
         ArgumentNullException.ThrowIfNull(logSinkBuilder, nameof(logSinkBuilder));
 
-        SmartConsoleLogSink consoleLogSinkBuilder = new();
+        SmartConsoleLogSink smartConsoleLogSink = new();
 
-        logSinkBuilder(consoleLogSinkBuilder);
+        logSinkBuilder(smartConsoleLogSink);
 
-        return @this.LogSink(consoleLogSinkBuilder);
+        return @this.SmartConsole(smartConsoleLogSink);
     }
 }

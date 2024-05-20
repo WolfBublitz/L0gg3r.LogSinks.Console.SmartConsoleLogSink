@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using L0gg3r.Base;
 
 namespace SmartConsoleLogSinkTests.ConsoleOutput.Tests;
 
@@ -10,16 +11,18 @@ public class TheSmartConsoleLogSink : VerifyBase
     {
         // Arrange
         SmartConsoleLogSink logSink = new();
-        ConsoleOutputGrabber consoleOutputGrabber = new();
+        string consoleOutput;
 
         // Act
-        using (consoleOutputGrabber.Start())
+        using (TestConsole testConsole = new())
         {
             await logSink.SubmitAsync(new LogMessage() { Payload = "Test" }).ConfigureAwait(false);
             await logSink.FlushAsync().ConfigureAwait(false);
+
+            consoleOutput = testConsole.Output;
         }
 
-        string output = consoleOutputGrabber.Output.ScrubDateTime("yyyy-MM-dd HH\\:mm\\:ss.ffffff", replacement: "Timestamp");
+        string output = consoleOutput.ScrubDateTime("yyyy-MM-dd HH\\:mm\\:ss.ffffff", replacement: "Timestamp");
 
         // Assert
         await Verify(output);
@@ -30,16 +33,18 @@ public class TheSmartConsoleLogSink : VerifyBase
     {
         // Arrange
         SmartConsoleLogSink logSink = new();
-        ConsoleOutputGrabber consoleOutputGrabber = new();
+        string consoleOutput;
 
         // Act
-        using (consoleOutputGrabber.Start())
+        using (TestConsole testConsole = new())
         {
             await logSink.SubmitAsync(new LogMessage() { Payload = null }).ConfigureAwait(false);
             await logSink.FlushAsync().ConfigureAwait(false);
+
+            consoleOutput = testConsole.Output;
         }
 
-        string output = consoleOutputGrabber.Output.ScrubDateTime("yyyy-MM-dd HH\\:mm\\:ss.ffffff", replacement: "Timestamp");
+        string output = consoleOutput.ScrubDateTime("yyyy-MM-dd HH\\:mm\\:ss.ffffff", replacement: "Timestamp");
 
         // Assert
         await Verify(output);

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using L0gg3r.Base;
 
 namespace SmartConsoleLogSinkTests.PropertyTests.FormatPropertyTests;
 
@@ -9,22 +10,23 @@ public class TheFormatProperty : VerifyBase
     public async Task ShouldFormatMessage()
     {
         // Arrange
-        string output = string.Empty;
         SmartConsoleLogSink logSink = new()
         {
             Format = "{Timestamp:yyyy-MM-dd HH} ({LogLevel}) ({Senders:list:{}| > }) -> {Payload}"
         };
-        ConsoleOutputGrabber consoleOutputGrabber = new();
+
+        string consoleOutput;
 
         // Act
-        using (consoleOutputGrabber.Start())
-
+        using (TestConsole testConsole = new())
         {
             await logSink.SubmitAsync(new LogMessage() { Payload = "Test" }).ConfigureAwait(false);
             await logSink.FlushAsync().ConfigureAwait(false);
+
+            consoleOutput = testConsole.Output;
         }
 
-        output = consoleOutputGrabber.Output.ScrubDateTime("yyyy-MM-dd HH", replacement: "Timestamp");
+        string output = consoleOutput.ScrubDateTime("yyyy-MM-dd HH", replacement: "Timestamp");
 
         // Assert
         await Verify(output);
@@ -39,17 +41,20 @@ public class TheFormatProperty : VerifyBase
         {
             Format = "Timestamp:yyyy-MM-dd HH} ({LogLevel}) ({Senders:list:{}| > }) -> {Payload}"
         };
-        ConsoleOutputGrabber consoleOutputGrabber = new();
+
+        string consoleOutput;
 
         // Act
-        using (consoleOutputGrabber.Start())
+        using (TestConsole testConsole = new())
 
         {
             await logSink.SubmitAsync(new LogMessage() { Payload = "Test" }).ConfigureAwait(false);
             await logSink.FlushAsync().ConfigureAwait(false);
+
+            consoleOutput = testConsole.Output;
         }
 
-        output = consoleOutputGrabber.Output.ScrubDateTime("yyyy-MM-dd HH", replacement: "Timestamp");
+        output = consoleOutput.ScrubDateTime("yyyy-MM-dd HH", replacement: "Timestamp");
 
         // Assert
         await Verify(output);

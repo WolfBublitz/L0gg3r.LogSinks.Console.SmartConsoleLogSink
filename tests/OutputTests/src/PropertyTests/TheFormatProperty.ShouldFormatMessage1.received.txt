@@ -1,4 +1,0 @@
-﻿The format string has 1 issue:
-Format string has too many closing braces
-In: "Timestamp:yyyy-MM-dd HH} ({LogLevel}) ({Senders:list:{}| > }) -> {Payload}"
-At:  -----------------------^ 

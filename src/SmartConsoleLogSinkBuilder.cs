@@ -4,6 +4,8 @@
 // </copyright>
 // ----------------------------------------------------------------------------
 
+using L0gg3r.Builder;
+
 namespace L0gg3r.LogSinks.Console.SmartConsoleLogSink;
 
 /// <summary>
@@ -20,7 +22,7 @@ public class SmartConsoleLogSinkBuilder : LogSinkBuilder<SmartConsoleLogSink, Sm
     /// </summary>
     /// <remarks>
     /// <para>
-    /// The format string is 
+    /// The format string is
     /// </para>
     /// <para>
     /// The default format is "{Timestamp:yyyy-MM-dd HH\\:mm\\:ss.ffffff} [{LogLevel}] [{Senders:list:{}| > }] {Payload}".
