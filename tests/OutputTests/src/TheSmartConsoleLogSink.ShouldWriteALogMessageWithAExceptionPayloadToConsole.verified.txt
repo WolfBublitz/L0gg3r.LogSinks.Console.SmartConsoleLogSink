@@ -1,0 +1,3 @@
+﻿{Timestamp---------------} [INFO] [] System.Exception: Some error
+   at SmartConsoleLogSinkTests.PayloadOutputTests.TheSmartConsoleLogSink.<ShouldWriteALogMessageWithAExceptionPayloadToConsole>g__action|1_0() in {ProjectDirectory}PayloadOutputTests.cs:line 40
+   at SmartConsoleLogSinkTests.PayloadOutputTests.TheSmartConsoleLogSink.ShouldWriteALogMessageWithAExceptionPayloadToConsole() in {ProjectDirectory}PayloadOutputTests.cs:line 44
