@@ -1,1 +1,1 @@
-﻿{Timestamp---------------} [Info] [] Test
+﻿{Timestamp---------------} [INFO] [] Test

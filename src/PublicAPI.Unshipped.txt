@@ -1,0 +1,1 @@
+override sealed L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsoleLogSink.WriteAsync(in L0gg3r.Base.LogMessage logMessage, L0gg3r.LogSinks.Console.SmartConsoleLogSink.SmartConsole! console) -> System.Threading.Tasks.ValueTask

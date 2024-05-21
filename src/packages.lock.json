@@ -5,8 +5,8 @@
       "L0gg3r.Base": {
         "type": "Direct",
         "requested": "[1.*-*, 2.0.0)",
-        "resolved": "1.0.0-preview.15",
-        "contentHash": "hxEV83A1J9VxlDjDs3P0HMy1DcxUY0PKjhQZS+hcSxW+KvXZgse7tl5wNvYWE1E6M8CFQIjF2BFylDyLX8E6Zg=="
+        "resolved": "1.0.0-preview.16",
+        "contentHash": "TdSSKqJVyT1MlZVQxXqXmzoSrRUxaoGkFcSzfY55ANm/HFLY48IBgMLw3eT6nwZxye5uqMsW19qP55/09VhNkQ=="
       },
       "L0gg3r.Builder": {
         "type": "Direct",

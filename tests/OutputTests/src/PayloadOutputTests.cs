@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using L0gg3r.Base;
 
-namespace SmartConsoleLogSinkTests.ConsoleOutput.Tests;
+namespace SmartConsoleLogSinkTests.PayloadOutputTests;
 
 [TestClass]
 public class TheSmartConsoleLogSink : VerifyBase

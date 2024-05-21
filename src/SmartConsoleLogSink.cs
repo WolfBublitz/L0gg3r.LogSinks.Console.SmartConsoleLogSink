@@ -34,7 +34,7 @@ public class SmartConsoleLogSink : ConsoleLogSinkBase<SmartConsole>
     /// <summary>
     /// Gets or sets the format of the <see cref="LogMessage"/>.
     /// </summary>
-    public string Format { get; set; } = "{Timestamp:yyyy-MM-dd HH\\:mm\\:ss.ffffff} [{LogLevel}] [{Senders:list:{}| > }] {Payload}";
+    public string Format { get; set; } = "{Timestamp:yyyy-MM-dd HH\\:mm\\:ss.ffffff} [{LogLevel.ShortName}] [{Senders:list:{}| > }] {Payload}";
 
     // ┌────────────────────────────────────────────────────────────────────────────────┐
     // │ Protected Methods                                                              │
