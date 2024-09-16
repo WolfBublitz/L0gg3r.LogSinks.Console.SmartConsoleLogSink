@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
-    <ProjectsDir>$(ProjectsDir)../../</ProjectsDir>
+    <ProjectsDir>$(ProjectDir)../..</ProjectsDir>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <RestoreLockedMode Condition="Exists($(CI))">true</RestoreLockedMode>
